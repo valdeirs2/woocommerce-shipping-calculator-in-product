@@ -47,9 +47,9 @@ class Correios_Shipping_Ajax_Postcode {
 					</tr>';
 				}
 
-			if( get_option('wscip_obs') ):
+			if( get_option('wscip_obs','*Este resultado é apenas uma estimativa para este produto. O valor final considerado, deverá ser o total do carrinho.') ):
 				echo "<tr><td colspan='2'>";
-						echo get_option('wscip_obs','*Este resultado é apenas uma estimativa para este produto. O valor final considerado, deverá ser o total do carrinho.');
+						echo get_option('wscip_obs');
 				echo "</td></tr>";
 			endif;
 
