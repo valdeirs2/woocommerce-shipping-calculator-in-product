@@ -86,9 +86,9 @@ function detect_product_variation() {
 	
 	} else {
 
-		if( jQuery('button[name=add-to-cart]').length > 0 )
-			if( jQuery('button[name=add-to-cart]').val() > 0  )
-				return jQuery('button[name=add-to-cart]').val();
+		if( jQuery('*[name=add-to-cart]').length > 0 )
+			if( jQuery('*[name=add-to-cart]').val() > 0  )
+				return jQuery('*[name=add-to-cart]').val();
 			else
 				return false;
 		else
