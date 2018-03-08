@@ -6,16 +6,8 @@ class WooSettings {
 
 		$this->id = 'wscip';
 
+		add_filter( 'woocommerce_get_sections_products', array( $this, 'add_section' ) );
 		add_filter( 'woocommerce_get_settings_products', array( $this, 'wscip_settings' ), 1, 2 );
-
-	}
-
-	public function load_section( $settings_tabs ) {
-
-		$settings_tabs[ $this->id ] = __( 'Calculadora de Frete na Página do Produto', '' );
-
-        return $settings_tabs;
-
 	}
 
 	public function add_section( $sections ) {
@@ -27,8 +19,10 @@ class WooSettings {
 
 	public function wscip_settings( $settings, $current_section ) {
 
-		if(  'display' != $current_section )
+		if(  'wscip' != $current_section )
 			return $settings;
+
+		$settings = array();
 		
 		$settings[] = array( 
 			'name' => __( 'Calculadora de Frete na Página do Produtos', '' ), 
