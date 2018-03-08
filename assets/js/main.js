@@ -57,6 +57,18 @@
 
 		});
 
+		$('form.cart').on('keypress', function(e) {
+		 	
+		 	var keyCode = e.keyCode || e.which;
+			
+			if (keyCode === 13) { 
+
+				$('#wscp-button').click();
+		    	e.preventDefault();
+		    	return false;
+		  	}
+		});
+
 	});
 
 
