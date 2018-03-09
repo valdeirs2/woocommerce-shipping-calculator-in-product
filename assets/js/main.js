@@ -57,7 +57,7 @@
 
 		});
 
-		$('form.cart').on('keypress', function(e) {
+		$('form.cart, #wscp-postcode').on('keypress', function(e) {
 		 	
 		 	var keyCode = e.keyCode || e.which;
 			
