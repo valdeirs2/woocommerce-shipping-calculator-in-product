@@ -1,11 +1,11 @@
 .woocommerce #shipping-calc {
-	width: 100%;
+    width: 100%;
     float: left;
     margin: 30px 0;
 }
 
 .woocommerce #shipping-calc > p {
-	font-size: 15px;
+    font-size: 15px;
     color: #717171;
     margin: 0 0 18px;
     border-bottom: 1px solid rgba(0,0,0,.05);
@@ -77,7 +77,7 @@
 }
 
 .woocommerce #shipping-calc > #wscp-response{
-	width: 100%;
+    width: 100%;
     float: left;
     padding: 10px 0;
 }
@@ -111,4 +111,24 @@
     vertical-align: bottom;
     width: 36px;
     display: inline-block;
+}
+
+
+@media (min-width:381px) and (max-width:500px) {
+
+    .woocommerce #shipping-calc > #wscp-button, .woocommerce #shipping-calc > #wscp-postcode.text {
+       width:40%
+    }
+}
+
+@media (max-width:380px) {
+
+    .woocommerce #shipping-calc > #wscp-button, .woocommerce #shipping-calc > #wscp-postcode.text {
+       width:96%;margin-bottom: 10px
+    }
+
+    .woocommerce #shipping-calc>#wscp-button.loading{
+       background-repeat: no-repeat;
+       background-size: 30% !important;
+    }
 }
