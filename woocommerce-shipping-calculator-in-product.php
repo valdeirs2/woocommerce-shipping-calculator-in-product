@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: WooCommerce Shipping Calculator in Product
- * Plugin URI:  https://github.com/valdeirs2/fazer
- * Description: Show the shipping calculator on the product page of your store..
+ * Plugin URI:  https://github.com/valdeirs2/woocommerce-shipping-calculator-in-product
+ * Description: Show the shipping calculator on the product page of your store.
  * Author:      Valdeir Oliveira
  * Author URI:  https://br.linkedin.com/in/valde%C3%AD-santos-08310354
  * Version:     1.0.1
@@ -40,25 +40,14 @@ if ( ! class_exists( __CLASS__ ) ) {
 
 			add_action( 'admin_notices', array( __CLASS__,'plugin_donate') );
 
-			if ( !class_exists( 'WC_Correios' ) ) {
+			add_action('wp', array($this,'init'));
 				
-				if ( is_admin() ) {
+			add_action('woocommerce_shipping_init', function(){
 
-					add_action( 'admin_notices', array( __CLASS__,'Woo_Shipping_dependecy_notice') );
+				include_once dirname( __FILE__ ) . '/includes/woo-settings.class.php';					
+			});
 
-					deactivate_plugins( plugin_basename( __FILE__ ) );
-				}			
-			} else {
-
-				add_action('wp', array($this,'init'));
-				
-				add_action('woocommerce_shipping_init', function(){
-
-					include_once dirname( __FILE__ ) . '/includes/woo-settings.class.php';					
-				});
-
-				include_once dirname( __FILE__ ) . '/includes/ajax-postcode.class.php';
-			}
+			include_once dirname( __FILE__ ) . '/includes/ajax-postcode.class.php';
 		}
 
 		public function init() {
