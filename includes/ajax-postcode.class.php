@@ -145,6 +145,9 @@ class Correios_Shipping_Ajax_Postcode {
 
 	            $rates[] = $rate;
 	        }
+
+	        if( $rates )
+	        	WC()->customer->set_shipping_postcode( $request['postcode'] );
 	    }
 	    return $rates;
 	}
