@@ -119,14 +119,31 @@ class Correios_Shipping_Ajax_Postcode {
 	            ]
 	        ];
 
+	        if( class_exists('WC_Correios_Webservice') ):
+
+				add_filter( 'woocommerce_correios_shipping_args', function( $array, $this_id, $this_instance_id, $this_package ) use( $price ){
+					
+					$option_id = 'woocommerce_'.$this_id.'_'.$this_instance_id.'_settings';
+
+					$settings = get_option( $option_id );
+
+					if( 'yes' == $settings['declare_value'] ) {
+
+						$array['nVlValorDeclarado'] = $price;
+					}
+
+					return $array;
+				
+				},10,4 ); 
+
+			endif;
+
+
 	        $packageRates = WC_Shipping::instance()->calculate_shipping_for_package($package);
 
 	        foreach ($packageRates['rates'] as $rate) {
-	            
-	            $rate->product = $data->get_name();
-	            $rate->availability = $data->get_name();
-	            $rates[] = $rate;
 
+	            $rates[] = $rate;
 	        }
 	    }
 	    return $rates;
