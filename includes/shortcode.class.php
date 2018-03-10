@@ -2,12 +2,12 @@
 
 class Correios_Shipping_Shortcode extends Correios_Shipping_Frontend_Site{
 
-	public static function init() {
+	public function __construct() {
 
-		add_shortcode( 'shipping_calculator_on_product_page', __CLASS__ . '::add_shortcode' );
+		add_shortcode( 'shipping_calculator_on_product_page', array( $this,'add_shortcode') );
 	}
 
-	public static function add_shortcode( $atts, $content = "" ) {
+	public function add_shortcode( $atts, $content = "" ) {
 
 		if( !is_product() )	return;
 
@@ -16,10 +16,10 @@ class Correios_Shipping_Shortcode extends Correios_Shipping_Frontend_Site{
 
 		ob_start();
 
-		return self::load_form_shipping();
+		$this->load_form_shipping();
 
-
+		return ob_get_clean();
 	}
 }
 
-Correios_Shipping_Shortcode::init();
+new Correios_Shipping_Shortcode;

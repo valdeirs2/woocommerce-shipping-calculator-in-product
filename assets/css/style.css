@@ -1,134 +1,134 @@
 .woocommerce #shipping-calc {
-    width: 100%;
-    float: left;
-    margin: 30px 0;
+  width: 100%;
+  float: left;
+  margin: 30px 0;
 }
 
-.woocommerce #shipping-calc > p {
-    font-size: 15px;
-    color: #717171;
-    margin: 0 0 18px;
-    border-bottom: 1px solid rgba(0,0,0,.05);
-    padding-bottom: 11px;
+.woocommerce #shipping-calc p {
+  font-size: 15px;
+  color: #717171;
+  margin: 0 0 18px;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+  padding-bottom: 11px;
 }
 
-.woocommerce #shipping-calc > #wscp-postcode.text {
-    width: calc(78% - 180px);
-    height: 40px;
-    margin-right: 5px;
-    padding: .6180469716em;
-    background-color: #f2f2f2;
-    color: #43454b;
-    display: inline-block;
-    outline: 0;
-    border: 0;
-    float: none;
-    -webkit-appearance: none;
-    box-sizing: border-box;
-    font-weight: 400;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.125);
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.125);
-    border-radius: 0;
-    -webkit-border-radius: 0;
-    vertical-align: middle;
+.woocommerce #shipping-calc #wscp-postcode.text {
+  width: calc(78% - 180px);
+  height: 40px;
+  margin-right: 5px;
+  padding: .6180469716em;
+  background-color: #f2f2f2;
+  color: #43454b;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  float: none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  font-weight: 400;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.125);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.125);
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  vertical-align: middle;
 }
 
-.woocommerce #shipping-calc > #wscp-button {
-    padding: .6180469716em .3em;
-    height: 40px;
-    float: none;
-    text-decoration: none;
-    font-weight: 600;
-    text-shadow: none;
-    display: inline-block;
-    outline: 0;
-    -webkit-appearance: none;
-    -webkit-font-smoothing: antialiased;
-    border-radius: 0;
-    -webkit-border-radius: 0;
-    -webkit-appearance: button;
-    cursor: pointer;
-    border-color: #eeeeee;
-    line-height: 100%;
-    border: 0;
-    font-size: 100%;
-    margin: 0;
-    vertical-align: middle;
-    width: 22%;
-    z-index: 0;
+.woocommerce #shipping-calc #wscp-button {
+  padding: .6180469716em .3em;
+  height: 40px;
+  float: none;
+  text-decoration: none;
+  font-weight: 600;
+  text-shadow: none;
+  display: inline-block;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -webkit-appearance: button;
+  cursor: pointer;
+  border-color: #eeeeee;
+  line-height: 100%;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: middle;
+  width: 22%;
+  z-index: 0;
 }
 
-.woocommerce #shipping-calc > #wscp-button.loading{
-    background-image: url(../images/shipping-load.gif);
-    background-color: transparent !important;
-    background-position: center;
-    background-size: 100%;
-    color: transparent !important;
-    opacity: 1;
-    cursor: default;
+.woocommerce #shipping-calc #wscp-button.loading{
+  background-image: url(../images/shipping-load.gif);
+  background-color: transparent !important;
+  background-position: center;
+  background-size: 100%;
+  color: transparent !important;
+  opacity: 1;
+  cursor: default;
 }
 
-.woocommerce #shipping-calc > a{
-    vertical-align: middle;
-    display: inline-block;
-    font-size: 13px;
-    margin-left: 10px;
-    text-decoration: none;
+.woocommerce #shipping-calc a{
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 13px;
+  margin-left: 10px;
+  text-decoration: none;
 }
 
-.woocommerce #shipping-calc > #wscp-response{
-    width: 100%;
-    float: left;
-    padding: 10px 0;
+.woocommerce #shipping-calc #wscp-response{
+  width: 100%;
+  float: left;
+  padding: 10px 0;
 }
 
-.woocommerce #shipping-calc > #wscp-response > table{
-    border-spacing: 0;
-    width: 100%;
-    border-collapse: separate;
-    margin: 15px 0 0;
+.woocommerce #shipping-calc #wscp-response table{
+  border-spacing: 0;
+  width: 100%;
+  border-collapse: separate;
+  margin: 15px 0 0;
 }
 
-.woocommerce #shipping-calc > #wscp-response > table th {
-    background-color: #f3f2f2;
-    font-weight: 600;
+.woocommerce #shipping-calc #wscp-response table th {
+  background-color: #f3f2f2;
+  font-weight: 600;
 }
-.woocommerce #shipping-calc > #wscp-response > table td {
-    background-color: #fbfbfb;
-}
-
-.woocommerce #shipping-calc > #wscp-response > table td, .woocommerce #shipping-calc > #wscp-response > table th{
-    font-size: 13px;
-    color: #6d6d6d;
-    text-align: left;
-    display: table-cell;
-    padding: 1em 1.41575em;
+.woocommerce #shipping-calc #wscp-response table td {
+  background-color: #fbfbfb;
 }
 
-.woocommerce #shipping-calc > #delivery_truck {
-    fill: #429a45;
-    margin-right: 10px;
-    vertical-align: bottom;
-    width: 36px;
-    display: inline-block;
+.woocommerce #shipping-calc #wscp-response table td, .woocommerce #shipping-calc #wscp-response table th{
+  font-size: 13px;
+  color: #6d6d6d;
+  text-align: left;
+  display: table-cell;
+  padding: 1em 1.41575em;
+}
+
+.woocommerce #shipping-calc #delivery_truck {
+  fill: #429a45;
+  margin-right: 10px;
+  vertical-align: bottom;
+  width: 36px;
+  display: inline-block;
 }
 
 
 @media (min-width:381px) and (max-width:500px) {
 
-    .woocommerce #shipping-calc > #wscp-button, .woocommerce #shipping-calc > #wscp-postcode.text {
-       width:40%
-    }
+  .woocommerce #shipping-calc #wscp-button, .woocommerce #shipping-calc #wscp-postcode.text {
+   width:40%
+  }
 }
 
 @media (max-width:380px) {
 
-    .woocommerce #shipping-calc > #wscp-button, .woocommerce #shipping-calc > #wscp-postcode.text {
-       width:96%;margin-bottom: 10px
-    }
+  .woocommerce #shipping-calc #wscp-button, .woocommerce #shipping-calc #wscp-postcode.text {
+   width:96%;margin-bottom: 10px
+  }
 
-    .woocommerce #shipping-calc>#wscp-button.loading{
-       background-repeat: no-repeat;
-       background-size: 30% !important;
-    }
+  .woocommerce #shipping-calc #wscp-button.loading{
+   background-repeat: no-repeat;
+   background-size: 30% !important;
+  }
 }
