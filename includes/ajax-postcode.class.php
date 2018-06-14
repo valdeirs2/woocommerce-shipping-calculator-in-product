@@ -206,6 +206,11 @@ class Correios_Shipping_Ajax_Postcode {
 	        $packageRates = WC_Shipping::instance()->calculate_shipping_for_package($package);
 
 	        foreach ($packageRates['rates'] as $rate) {
+			
+		    $meta =  $rate->get_meta_data();
+
+	            if( isset( $meta['_delivery_forecast'] ) )
+	        	$rate->set_label( $rate->get_label() . " (Entrega em " . $meta['_delivery_forecast'] . " dias úteis)" );
 
 	            $rates[] = $rate;
 	        }
