@@ -137,6 +137,70 @@ class Correios_Shipping_Ajax_Postcode {
 				},10,4 ); 
 
 			endif;
+		    
+		$methods = WC_Shipping::instance()->load_shipping_methods($package);
+
+	        foreach ($methods as $key => $method) {
+	        	
+	        	if( "free_shipping" == $method->id && 'yes' == $method->enabled ) {
+	        			
+	        		$GLOBALS['method'] = $method;
+
+	        		$has_coupon = $has_met_min_amount = false;
+
+	        		if ( in_array( $method->requires, array( 'coupon', 'either', 'both' ) ) ) {
+
+			            if ( $coupons = WC()->cart->get_coupons() ) {
+			                foreach ( $coupons as $code => $coupon ) {
+			                    if ( $coupon->is_valid() && $coupon->get_free_shipping() ) {
+			                        $has_coupon = true;
+			                        break;
+			                    }
+			                }
+			            }
+			        }
+
+			        if ( in_array( $method->requires, array( 'min_amount', 'either', 'both' ) ) ) {
+
+			            $_total = $price * $request['qty'];
+
+			            if ( $_total >= $method->min_amount ) {
+			                $has_met_min_amount = true;
+			            }
+			        }
+
+			        switch ( $method->requires ) {
+
+			            case 'min_amount' :
+			                $is_available = $has_met_min_amount;
+			                break;
+			            case 'coupon' :
+			                $is_available = $has_coupon;
+			                break;
+			            case 'both' :
+			                $is_available = $has_met_min_amount && $has_coupon;
+			                break;
+			            case 'either' :
+			                $is_available = $has_met_min_amount || $has_coupon;
+			                break;
+			            default :
+			                $is_available = false;
+			                break;
+			        }
+
+
+	        		break;
+	        	}
+	        }
+
+
+	        if( $is_available ) {
+
+	        	$rates[] = (object) [
+	        		'cost' => 0,
+	        		'label' => $method->method_title
+	        	];
+	        }
 
 
 	        $packageRates = WC_Shipping::instance()->calculate_shipping_for_package($package);
