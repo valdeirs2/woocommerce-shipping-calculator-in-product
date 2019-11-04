@@ -43,7 +43,7 @@ if ( ! class_exists( __CLASS__ ) ) {
 
 			add_action('wp', array($this,'init'));
 				
-			add_action('woocommerce_shipping_init', function(){
+			add_action('plugins_loaded', function(){
 
 				include_once dirname( __FILE__ ) . '/includes/woo-settings.class.php';					
 			});
