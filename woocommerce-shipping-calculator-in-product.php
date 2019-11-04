@@ -62,7 +62,7 @@ if ( ! class_exists( __CLASS__ ) ) {
 			endif;
 		}
 
-		public function plugin_donate() {
+		public static function plugin_donate() {
 
 			$class = 'notice notice-info is-dismissible to apply';
 
