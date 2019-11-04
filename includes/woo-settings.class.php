@@ -8,6 +8,15 @@ class WooSettings {
 
 		add_filter( 'woocommerce_get_sections_products', array( $this, 'add_section' ) );
 		add_filter( 'woocommerce_get_settings_products', array( $this, 'wscip_settings' ), 1, 2 );
+		$this->update_default_customer_address();
+	}
+
+	public function update_default_customer_address() {
+
+		$address  = get_option('woocommerce_default_customer_address');
+
+		if( empty($address) )
+			update_option( 'woocommerce_default_customer_address', 'geolocation' );
 	}
 
 	public function add_section( $sections ) {
