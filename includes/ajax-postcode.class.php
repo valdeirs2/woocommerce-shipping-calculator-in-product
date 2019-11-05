@@ -4,6 +4,8 @@ class Correios_Shipping_Ajax_Postcode {
 
 	public function __construct() {
 
+		$this->textdomain = 'wsc-plugin';
+
 		add_action( 'wp_ajax_wscp_ajax_postcode', array($this,'wscp_ajax_postcode') );
 		add_action( 'wp_ajax_nopriv_wscp_ajax_postcode', array($this,'wscp_ajax_postcode') );
 	}
@@ -18,7 +20,7 @@ class Correios_Shipping_Ajax_Postcode {
 
 		if( !is_array($shipping_response) ){
 
-			echo "<div class='woocommerce-message woocommerce-error'>".( $shipping_response ? $shipping_response : 'Nenhuma forma de entrega disponível.' )."</div>";
+			echo "<div class='woocommerce-message woocommerce-error'>".( $shipping_response ? $shipping_response : __('Nenhuma forma de entrega disponível.', $this->textdomain) )."</div>";
 			
 		} else {
 
@@ -27,10 +29,10 @@ class Correios_Shipping_Ajax_Postcode {
 				<tbody>
 					<tr class="shipping">
 				 		<th>
-							Entrega						
+							'. __('Entrega', $this->textdomain) .'						
 						</th>
 						<th>
-							Valor	 						
+							'.__('Valor', $this->textdomain).'	 						
 						</th>
 				  	</tr>';
 
@@ -47,11 +49,11 @@ class Correios_Shipping_Ajax_Postcode {
 					</tr>';
 				}
 
-			if( get_option('wscip_obs','*Este resultado é apenas uma estimativa para este produto. O valor final considerado, deverá ser o total do carrinho.') ):
-				echo "<tr><td colspan='2'>";
-						echo get_option('wscip_obs');
-				echo "</td></tr>";
-			endif;
+			
+			echo "<tr><td colspan='2'>";
+				echo get_option('wscip_obs', __('*Este resultado é apenas uma estimativa para este produto. O valor final considerado, deverá ser o total do carrinho.', $this->textdomain));
+			echo "</td></tr>";
+			
 
 			echo
 				'</tbody>
@@ -66,13 +68,13 @@ class Correios_Shipping_Ajax_Postcode {
 	    $product = wc_get_product( sanitize_text_field( $request['product'] ) );
 	    
 	    if (!$product->needs_shipping() || get_option('woocommerce_calc_shipping') === 'no' )
-	        return 'Não foi possível calcular a entrega deste produto';
+	        return __('Não foi possível calcular a entrega deste produto', $this->textdomain);
 	    
 	    if( !$product->is_in_stock() )
-	    	return 'Não foi possível calcular a entrega deste produto, pois o mesmo não está disponível.';
+	    	return __('Não foi possível calcular a entrega deste produto, pois o mesmo não está disponível.', $this->textdomain);
 
 	    if( !WC_Validation::is_postcode( $request['postcode'], WC()->customer->get_shipping_country() ) )
-	    	return 'Por favor, insira um CEP válido.';
+	    	return __('Por favor, insira um CEP válido.', $this->textdomain);
 
 	    $products = [$product];
 

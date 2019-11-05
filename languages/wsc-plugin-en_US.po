@@ -1,0 +1,154 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: WSC Plugin\n"
+"Language: en\n"
+
+#: 
+#, fuzzy
+msgid "Calculadora de Frete na Página do Produtos"
+msgstr "Shipping Calculator on Product Page"
+
+#: 
+msgid "Mostrar calculadora na página do Produto?"
+msgstr "Show calculator on Product page?"
+
+#: 
+msgid "Personalize a sua calculadora de frete, que deverá aparecer na página do produto."
+msgstr "Customize your shipping calculator, which should appear on the product page."
+
+#: 
+msgid "Desmarque caso queira esconder a calculadora da página dos produtos"
+msgstr "Uncheck if you want to hide the calculator from the products page."
+
+#: 
+msgid "Mostrar Calculadora"
+msgstr "Show Calculator"
+
+#: 
+msgid "Onde mostrar a calculadora?"
+msgstr "Where to show the calculator?"
+
+#: 
+msgid "Selecione o local do seu tema, onde a calculadora deverá aparecer"
+msgstr "Select the location of your theme where the calculator should appear"
+
+#: 
+msgid "Antes do botão de Compra"
+msgstr "Before add to cart button"
+
+#: 
+msgid "Depois do botão de Compra"
+msgstr "After add to cart button"
+
+#: 
+msgid "Antes da descrição curta"
+msgstr "Before short description"
+
+#: 
+msgid "Depois da descrição curta"
+msgstr "After short description"
+
+#: 
+msgid "Depois das metas (tags, categorias, etc)"
+msgstr "After meta tags (tags, categories, etc)"
+
+#: 
+msgid "Você também pode usar o shortcode"
+msgstr "You can also use shortcode."
+
+#: 
+msgid "Título da chamada"
+msgstr "Section title"
+
+#: 
+msgid "Isto irá exibir um texto de introdução acima do campo de CEP"
+msgstr "This will display an input text above the zip code field."
+
+#: 
+msgid "Consulte o prazo estimado e valor da entrega"
+msgstr "See estimated delivery time and amount"
+
+#: 
+msgid "Placeholder do campo de CEP"
+msgstr "Zip Code field placeholder"
+
+#: 
+msgid "Observação"
+msgstr "Note"
+
+#: 
+msgid "Informe o texto reservado que deverá aparecer no campo de CEP"
+msgstr "Enter the reserved text that should appear in the zip code field."
+
+#: 
+msgid "Insira o seu CEP"
+msgstr "Enter your Zip Code"
+
+#: 
+msgid "Exibe um texto de observação ao final dos métodos de envio"
+msgstr "Displays note text at the end of shipping methods"
+
+#: 
+msgid "*Este resultado é apenas uma estimativa para este produto. O valor final considerado, deverá ser o total do carrinho."
+msgstr "* This result is only an estimate for this product. The final value considered should be the total of the cart."
+
+#: 
+msgid "Cor do botão"
+msgstr "Button color"
+
+#: 
+msgid "Selecione uma cor para o botão de busca"
+msgstr "Select a color for the button"
+
+#: 
+msgid "Cor do texto do botão"
+msgstr "Button Text Color"
+
+#: 
+msgid "Selecione uma cor para o texto do botão de busca"
+msgstr "Select a color for the button text"
+
+#: 
+msgid "Não sei meu CEP"
+msgstr "I don't know my zip code"
+
+#: 
+msgid "Nenhuma forma de entrega disponível."
+msgstr "No form of delivery available."
+
+#: 
+msgid "Entrega"
+msgstr "Method"
+
+#: 
+msgid "Valor"
+msgstr "Cost"
+
+#: 
+msgid "Não foi possível calcular a entrega deste produto"
+msgstr "Unable to calculate delivery of this product"
+
+#: 
+msgid "Não foi possível calcular a entrega deste produto, pois o mesmo não está disponível."
+msgstr "Unable to calculate delivery of this product as it is not available."
+
+#: 
+msgid "Por favor, insira um CEP válido."
+msgstr "Please enter a valid zip code."
+
+#: 
+msgid "Para usar o shortcode, selecione \"Shortcode\" no menu \"Posição\""
+msgstr "To use shortcode, select \"Shortcode\" from the \"Position\" menu."
+
+#: 
+msgid "Calcular"
+msgstr "Calculate"
+
+#: 
+msgid "Está gostando de utilizar a Calculadora de Frete na Página do Produto? Me ajude a continuar criando novas soluções fazendo uma doação."
+msgstr "Are you enjoying using the \"Woocommerce Calculator on the Product Page? Help me keep creating new solutions by donating."
+

@@ -12,7 +12,7 @@ class Correios_Shipping_Shortcode extends Correios_Shipping_Frontend_Site{
 		if( !is_product() )	return;
 
 		if( 'shortcode' != get_option('wscip_position') )
-			return 'Para usar o shortcode, selecione "Shortcode" no menu "Posição"';
+			return __('Para usar o shortcode, selecione "Shortcode" no menu "Posição"','');
 
 		ob_start();
 
