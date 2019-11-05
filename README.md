@@ -1,7 +1,7 @@
 #  Woocommerce Shipping Calculator in Product Page
 
 **Contributors:** [Valdeir Oliveira](http://https://br.linkedin.com/in/valde%C3%AD-santos-08310354 "Valdeir Oliveira")
-**Donate:** [https://pag.ae/bdv16S9](https://pag.ae/bdv16S9 "https://pag.ae/bdv16S9")
+**Donate:** [PagSeguro Donation (BR)](https://pag.ae/bdv16S9 "https://pag.ae/bdv16S9") or [PayPal Donation](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=5KMVXCTX2ZXPG&currency_code=BRL&source=url)
 **Tags:** shipping, delivery, woocommerce, calculator, product
 **Tested** up to: 4.9
 
