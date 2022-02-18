@@ -102,15 +102,14 @@ class Correios_Shipping_Ajax_Postcode {
 
 	    foreach ($products as $data) {
 
-	        $cartId = WC()->cart->generate_cart_id($data->id, $product->is_type('variable') ? $data->variation_id : 0);
+	        $cartId = WC()->cart->generate_cart_id($data->get_id(), $product->is_type('variable') ? $data->variation_id : 0);
 
-	        $price = $data->get_price_excluding_tax();
-
-	        $tax = $data->get_price_including_tax() - $price;
+	        $price = wc_get_price_excluding_tax($data); #$data->get_price_excluding_tax();
+	        $tax = wc_get_price_including_tax($data); #$data->get_price_including_tax() - $price;
 
 	        $package['contents'] = [
 	            $cartId => [
-	                'product_id' => $data->id,
+	                'product_id' => $data->get_id(),
 	                'data' => $data,
 	                'quantity' => sanitize_text_field( $request['qty'] ),
 	                'line_total' => $price,
@@ -198,7 +197,7 @@ class Correios_Shipping_Ajax_Postcode {
 
 	        if( $is_available ) {
 
-	        	$rates[] = (object) [
+	        	$rates[$method->id] = (object) [
 	        		'cost' => 0,
 	        		'label' => $method->method_title
 	        	];
@@ -209,19 +208,21 @@ class Correios_Shipping_Ajax_Postcode {
 
 	        foreach ($packageRates['rates'] as $rate) {
 			
-		    $meta =  $rate->get_meta_data();
+		    	$meta =  $rate->get_meta_data();
 
 	            if( isset( $meta['_delivery_forecast'] ) )
 	        	$rate->set_label( $rate->get_label() . " (Entrega em " . $meta['_delivery_forecast'] . " dias úteis)" );
 
-	            $rates[] = $rate;
+	            $rates[$rate->get_method_id()] = $rate;
+
 	        }
 
 	        if( $rates ){
-			WC()->customer->set_shipping_postcode( $request['postcode'] );
-			WC()->customer->set_billing_postcode( $request['postcode'] );
-		}
+				WC()->customer->set_shipping_postcode( $request['postcode'] );
+				WC()->customer->set_billing_postcode( $request['postcode'] );
+			}
 	    }
+
 	    return $rates;
 	}
 }

@@ -17,6 +17,8 @@
 
 	<input type='hidden' name='wscp-nonce' id='wscp-nonce' value='<?= wp_create_nonce( 'wscp-nonce' ); ?>'>
 
+	<input type="hidden" name="add-to-cart" value="<?= get_the_ID() ?>">
+
 	<div id='wscp-response'></div>
 
 </div>

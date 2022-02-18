@@ -42,12 +42,13 @@ if ( ! class_exists( __CLASS__ ) ) {
 		
 		public function __construct() {
 
-
-			if( isset( $_GET['page'] ) && $_GET['page'] == 'wc-settings' )
-				add_action( 'admin_notices', array( __CLASS__,'plugin_donate') );
-
+			add_action("init", function(){
+			
 			add_action('wp', array($this,'init'));
-				
+				$adm = new WC_Admin_Notices();
+				$adm::add_custom_notice("wscp-donation", self::get_html_notice() );
+			});
+	
 			add_action('plugins_loaded', function(){
 
 				$this->load_textdomain();
@@ -75,9 +76,9 @@ if ( ! class_exists( __CLASS__ ) ) {
 			endif;
 		}
 
-		public static function plugin_donate() {
+		public static function get_html_notice() {
 
-			$class = 'notice notice-info is-dismissible to apply';
+			$class = '';
 
 			$message = __( 'Está gostando de utilizar a Calculadora de Frete na Página do Produto? Me ajude a continuar criando novas soluções fazendo uma doação.', 'wsc-plugin') . 
 				'<p>
@@ -91,7 +92,7 @@ if ( ! class_exists( __CLASS__ ) ) {
 					</a>
 				</p>';
 
-			printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ),  $message ); 
+			return sprintf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ),  $message ); 
 		}
 	}
 
