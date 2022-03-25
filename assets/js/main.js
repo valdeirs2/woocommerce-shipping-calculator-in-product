@@ -90,7 +90,7 @@ function detect_product_variation() {
 				if(opt.is_in_stock) varId = opt.variation_id;
 			});
 			
-			return (varId == null || varId == undefined) ? null : varId;
+			return (varId == null || varId == undefined) ? false : varId;
 		}
 	
 	} else {
