@@ -16,7 +16,7 @@
 			$('#wscp-response').html('');
 
 			var detected = detect_product_variation();
-
+			
 			if( !detected ) {
 
 				$('#wscp-response').fadeOut('fast',function(){
@@ -81,8 +81,17 @@ function detect_product_variation() {
 
 		if( jQuery('input[name=variation_id]').val() > 0  )
 			return jQuery('input[name=variation_id]').val();
-		else
-			return false;
+		else{
+			const obj = JSON.parse(jQuery( ".variations_form" ).attr("data-product_variations").replace("&quot;", '"'));
+			
+			let varId;
+			
+			obj.map(opt => {
+				if(opt.is_in_stock) varId = opt.variation_id;
+			});
+			
+			return (varId == null || varId == undefined) ? null : varId;
+		}
 	
 	} else {
 
