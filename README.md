@@ -25,9 +25,6 @@ Nos vemos lá!
 
 # Imagens
 
-<p><img src="https://solucoes-woocommerce.com.br/assets/images/w4.png?raw=true"></p>
 ![](https://solucoes-woocommerce.com.br/assets/images/w4.png?raw=true)
-
 ![](https://solucoes-woocommerce.com.br/assets/images/w3.png?raw=true)
-
 ![](https://solucoes-woocommerce.com.br/assets/images/w1.png?raw=true)
