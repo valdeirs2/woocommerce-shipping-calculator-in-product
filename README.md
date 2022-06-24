@@ -25,8 +25,8 @@ Nos vemos lá!
 
 # Imagens
 
-![Plugin Calculadora de Frete na Página do Produto](https://solucoes-woocommerce.com.br/assets/images/w4.png)
+![](https://solucoes-woocommerce.com.br/assets/images/w4.png)
 
-![enter image description here](https://solucoes-woocommerce.com.br/assets/images/w3.png)
+![](https://solucoes-woocommerce.com.br/assets/images/w3.png)
 
-![enter image description here](https://solucoes-woocommerce.com.br/assets/images/w1.png)
+![](https://solucoes-woocommerce.com.br/assets/images/w1.png)
