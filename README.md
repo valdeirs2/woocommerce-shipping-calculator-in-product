@@ -8,16 +8,21 @@ No entanto, para que eu pudesse seguir oferecendo o suporte necessário para que
 **Com esta nova versão, você poderá:**
 
  - [x] Ocultar/Mostrar o ícone do caminhão  Personalizar a cor do ícone do caminhão  
-  - [x] Ocultar/Mostrar o link para pesquisa do CEP nos Correios 
-  - [x] Escolher a melhor posição para mostrar a calculadora
-  - [x] Utilizar ShortCode para mostrar a caluladora onde quiser 
-  - [x] Alterar a cor do texto e do botão de cálculo
-  - [x] Adicionar uma observação nos custos do cálculo
-  - [x] Layout responsivo (se adapta ao tamanho da tela) e muito mais.
+ - [x] Ocultar/Mostrar o link para pesquisa do CEP nos Correios 
+ - [x] Escolher a melhor posição para mostrar a calculadora
+ - [x] Utilizar ShortCode para mostrar a caluladora onde quiser 
+ - [x] Alterar a cor do texto e do botão de cálculo
+ - [x] Adicionar uma observação nos custos do cálculo
+ - [x] Layout responsivo (se adapta ao tamanho da tela) e muito mais.
+
+O plugin funciona com todas as formas de entrega configuradas na sua loja, como por exemplo: Taxa Fixa, Retirar, Frete Grátis, Correios, Jadlog, Kangu, Frenet, Melhor Envio e etc, além de respeitar as regras de fretes configuradas, como frete grátis por região, entrega somente em ranges de CEP e etc.
 
 Se você já tem a versão Open Source, não tem problema, mas, se quiser ter suporte, atualizações e recursos imprescindíveis para que o plugin funcione corretamente na sua loja, eu sugiro que considere comprar a nova versão.
 
+
 O plugin agora está disponível em https://solucoes-woocommerce.com.br/ e o valor é bem acessível.
+
+Quer testar antes de compra? Acesse: https://solucoes-woocommerce.com.br/demo/
 
 
 Nos vemos lá! 
