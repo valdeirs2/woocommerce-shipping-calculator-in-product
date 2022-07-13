@@ -1,7 +1,7 @@
 # Plugin - Calculadora de Frete na Página do Produto
 
 Olá!
-A nossa jornada aqui no GitHub foi muito legal! Foram centenas de downloads e vários donos de loja virtual puderam oferecer aos seus clientes a comodidade de calcular o frete na página do produto.
+A nossa jornada aqui no GitHub foi muito legal! Foram centenas de downloads e vários donos de lojas virtuais puderam oferecer aos seus clientes a comodidade de calcular o frete na página do produto.
 
 No entanto, para que eu pudesse seguir oferecendo o suporte necessário para que o plugin funcionasse com as novas versões do WooComerce e do WordPress, foi preciso que eu tomasse a decisão de melhorá-lo e torná-lo pago.
 
